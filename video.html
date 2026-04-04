@@ -6,7 +6,7 @@
     <title>Video Tugas - Muhammad Faris Saputra</title>
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f2f5;
             margin: 0;
             display: flex;
@@ -18,19 +18,24 @@
             width: 100%;
             padding: 15px 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #3498db;
         }
         .container {
             background: white;
             width: 90%;
             max-width: 800px;
             margin: 30px 0;
-            padding: 25px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
@@ -39,20 +44,20 @@
             color: #2c3e50;
             border-bottom: 3px solid #3498db;
             display: inline-block;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
         }
-        /* AGAR VIDEO PAS DI LAYAR HP (RESPONSIVE) */
-        .video-container {
+        /* FRAME VIDEO RESPONSIVE */
+        .video-box {
             position: relative;
             padding-bottom: 56.25%; /* Rasio 16:9 */
             height: 0;
             overflow: hidden;
-            max-width: 100%;
+            border-radius: 12px;
             background: #000;
-            margin-top: 20px;
-            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        .video-container iframe {
+        .video-box iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -60,13 +65,14 @@
             height: 100%;
             border: 0;
         }
-        .description {
-            margin-top: 20px;
+        .info-text {
+            margin-top: 25px;
             color: #555;
+            font-size: 1.1em;
             line-height: 1.6;
         }
     </style>
-<head>
+</head>
 <body>
 
     <nav>
@@ -77,17 +83,20 @@
     </nav>
 
     <div class="container">
-        <h2>Video SIMP</h2>
+        <h2>Video Dokumentasi</h2>
         
-        <div class="video-container">
-            <iframe src="https://youtu.be/dQw4w9WgXcQ?si=qD5XoXX1QSAqCTle" allowfullscreen></iframe>
+        <div class="video-box">
+            <iframe 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
 
-        <div class="description">
-            <p>Video</p>
-        </div>
+        <div class="info-text">
+            
     </div>
 
 </body>
 </html>
-
